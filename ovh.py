@@ -133,7 +133,7 @@ if "reinstall" in action:
 
 # On entre dnas la boucle suivante si les actions demandées
 # sont start ou stop
-if "start" or "stop" in action:
+if action in ['start','stop']:
     # On prépare la requête
     target = "https://eu.api.ovh.com/1.0/vps/%s/%s" % (service, action)
     method = "POST"
